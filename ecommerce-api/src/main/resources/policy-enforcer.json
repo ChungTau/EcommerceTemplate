@@ -1,0 +1,26 @@
+{
+    "realm": "EcommerceTemplate",
+    "auth-server-url": "http://ecommerce-keycloak:8080",
+    "resource": "web-app",
+    "credentials": {
+        "secret": "xtWpNfingkiAoWXjmoYeLqCVahEiOwbK"
+    },
+    "enforcement-mode": "ENFORCING",
+    "paths": [
+        {
+            "path" : "/*",
+            "methods" : [
+            {
+                "method": "GET"
+            },
+            {
+                "method": "POST"
+            }
+            ]
+        },
+        {
+            "name" : "USER_API",
+            "path" : "/api/v1/home"
+        }
+    ] 
+}
