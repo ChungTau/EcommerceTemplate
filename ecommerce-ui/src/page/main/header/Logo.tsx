@@ -41,7 +41,7 @@ const Logo=()=>{
     const navigate = useNavigate();
     return(
         <Box minW={'100px'} display={'block'}>
-             <NavbarTitle ml={2} onClick={scrollToTop}>
+             <NavbarTitle onClick={scrollToTop}>
            
                 <NavbarH1 layoutId="main-title-container" onClick={()=>navigate(mainOutlet.HOME.path!)} >{DEFAULT_TITLE}</NavbarH1>
             </NavbarTitle>

@@ -13,7 +13,7 @@ const Header = () => {
         <MotionHeader
             initial={{ opacity:0}} 
             animate={{ opacity: 1 } }
-            transition={{duration: 0.2, delay: 0.05 }}
+            transition={{ ease: "easeIn",duration:0.4, delay: 0.05 }}
             position="fixed"
             top={0}
             left={0} 
@@ -23,7 +23,7 @@ const Header = () => {
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
         >
             <HeaderWrapper >
-            <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+            <Flex gap={10} h={16} alignItems={'center'} justifyContent={'space-between'}>
                 <Logo />
                 <PageNavigator />
                 <ActionBar/>
