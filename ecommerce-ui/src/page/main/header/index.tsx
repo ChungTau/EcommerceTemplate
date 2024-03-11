@@ -4,32 +4,31 @@ import Logo from "./Logo";
 import PageNavigator from "./PageNavigator";
 import ActionBar from "./ActionBar";
 
+import { HeaderWrapper } from "../../../component/HeaderWrapper";
+
 const MotionHeader = motion(chakra.header);
 
 const Header = () => {
-    const animationVariants = {
-        hidden: { y: -100, opacity: 0 },
-        visible: { y: 0, opacity: 1 },
-        exit: { y: -100, opacity: 0 },
-    };
     return (
         <MotionHeader
-            variants={animationVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ type: 'linear', duration: 0.6}}
-            bg={`rgba(56,56,56,0.8)`}
-            px={6}
-            m={2}
-            borderRadius={16}
-            color={'white'}
+            initial={{ opacity:0}} 
+            animate={{ opacity: 1 } }
+            transition={{duration: 0.2, delay: 0.05 }}
+            position="fixed"
+            top={0}
+            left={0} 
+            right={0} 
+            zIndex={999} 
+            bgColor={'white'} 
+            boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)"
         >
+            <HeaderWrapper >
             <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                 <Logo />
                 <PageNavigator />
                 <ActionBar/>
             </Flex>
+            </HeaderWrapper>
         </MotionHeader>
     );
 };

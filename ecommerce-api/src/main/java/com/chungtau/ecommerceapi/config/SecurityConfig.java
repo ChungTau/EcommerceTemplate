@@ -28,7 +28,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain resourceServerFilterChain(HttpSecurity http)throws Exception {
 
-        http.csrf((csrf) -> csrf.disable()).httpBasic((httpBasic) -> httpBasic.disable()).authorizeHttpRequests((authorize) -> authorize.requestMatchers(new AntPathRequestMatcher("/")).permitAll().requestMatchers(new AntPathRequestMatcher("/api/v1/*")).authenticated());
+        http.csrf((csrf) -> csrf.disable()).httpBasic((httpBasic) -> httpBasic.disable()).authorizeHttpRequests((authorize) -> authorize.requestMatchers(new AntPathRequestMatcher("/")).permitAll().requestMatchers(new AntPathRequestMatcher("/api/v1/userextras/*")).authenticated());
 
         http.sessionManagement(sess -> sess.sessionCreationPolicy( SessionCreationPolicy.STATELESS));
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.decoder(jwtDecoder())));

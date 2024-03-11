@@ -15,7 +15,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 import { IoMenu} from 'react-icons/io5';
-import { RouteConfig, mainOutlet, userOutlet, routes } from '../../../constant/routes';
+import { RouteConfig, mainOutlet} from '../../../constant/routes';
 
 const menuItemStyle = {
   bg: 'transparent',
@@ -89,7 +89,7 @@ const ActionBar = () => {
       {isAuthenticated ? (
         <>
           <MenuGroup {...menuGroupStyle} title="User">
-            {Object.entries(userOutlet).map(([key, route]) => createMenuItem(route, handleNavigation))}
+            {/*Object.entries(userOutlet).map(([key, route]) => createMenuItem(route, handleNavigation))*/}
           </MenuGroup>
           <MenuItem {...menuItemStyle} onClick={() => handleLogout()}>
             Log out
@@ -137,7 +137,7 @@ const ActionBar = () => {
           _hover={{ bgColor: '#74393e' }}
           onClick={() => handleSignIn()}
         >
-          {routes.SIGNIN.name}
+          {"Sign In"}
         </Button>
       </Flex>
       )}
