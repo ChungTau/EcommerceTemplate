@@ -28,7 +28,7 @@ const PageNavigator = () => {
                                     textDecoration: 'none',
                                     bg: 'whiteAlpha.200'
                                 }}>
-                                    {route.name}
+                                    <Text fontWeight={500} color={'#343434'}>{route.name}</Text>
                                 </ChakraLink>
                             );
                         }

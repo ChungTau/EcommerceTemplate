@@ -11,7 +11,10 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install --silent
+
+# Install react-scripts globally
+RUN npm install -g react-scripts
 
 # Copy the rest of the application code
 COPY . .

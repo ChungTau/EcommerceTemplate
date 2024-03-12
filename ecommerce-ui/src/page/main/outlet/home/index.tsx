@@ -1,9 +1,9 @@
-import { Center } from "@chakra-ui/react";
+import { Center, Text } from "@chakra-ui/react";
 
 function HomePage(){
     return(
         <div>
-            <Center>Home Page
+            <Center><Text color={'#343434'}>Home Page</Text>
             </Center>
         </div>
     );

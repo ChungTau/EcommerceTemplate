@@ -40,8 +40,7 @@ function MainPage() {
               exit="exit"
               transition={{
                 type: "linear",
-                delay: 0.3,
-                duration: 0.4
+                duration: 0.3
               }}
             >
               <Wrapper>
