@@ -36,8 +36,12 @@ services:
       context: ./ecommerce-ui
       dockerfile: Dockerfile
     volumes:
-      - ./ecommerce-ui:/app
-      - ./ecommerce-ui/node_modules:/app/node_modules
+      - ./ecommerce-ui/public:/app/public
+      - ./ecommerce-ui/src:/app/src
+      - ./ecommerce-ui/package.json:/app/package.json
+      - ./ecommerce-ui/package-lock.json:/app/package-lock.json
+      - ./ecommerce-ui/.env:/app/.env
+      - ./ecommerce-ui/tsconfig.json:/app/tsconfig.json
     ports:
       - "3000:3000"
     environment:
