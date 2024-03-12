@@ -48,7 +48,7 @@ interface MenuProps {
 
 
 
-const ActionBar = () => {
+const ActionBarDeprecated = () => {
   const navigate = useNavigate();
   const auth = useAuth();
   const isMobile = useBreakpointValue({ base: true, md: false });
@@ -145,4 +145,4 @@ const ActionBar = () => {
   );
 };
 
-export default ActionBar;
+export default ActionBarDeprecated;

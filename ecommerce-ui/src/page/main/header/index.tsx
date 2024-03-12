@@ -1,13 +1,16 @@
-import {Flex} from "@chakra-ui/react";
+import {Flex, chakra} from "@chakra-ui/react";
+import {motion} from "framer-motion";
 import Logo from "./Logo";
 import PageNavigator from "./PageNavigator";
 
 import {HeaderWrapper} from "../../../component/HeaderWrapper";
-import SignInButton from "./SignInButton";
+import ActionBar from "./actionBar";
+
+const MotionHeader = motion(chakra.header);
 
 const Header = () => {
     return (
-        <HeaderWrapper
+        <MotionHeader
             position="fixed"
             top={0}
             left={0}
@@ -15,12 +18,14 @@ const Header = () => {
             zIndex={999}
             bgColor={'white'}
             boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)">
-            <Flex gap={10} h={16} alignItems={'center'} justifyContent={'space-between'}>
-                <Logo/>
-                <PageNavigator/>
-                <SignInButton/>
-            </Flex>
-        </HeaderWrapper>
+            <HeaderWrapper>
+                <Flex gap={10} h={16} alignItems={'center'} justifyContent={'space-between'}>
+                    <Logo/>
+                    <PageNavigator/>
+                    <ActionBar/>
+                </Flex>
+            </HeaderWrapper>
+        </MotionHeader>
     );
 };
 

@@ -42,6 +42,7 @@ function MainPage() {
                 type: "linear",
                 duration: 0.3
               }}
+              style={{paddingTop:'70px'}}
             >
               <Wrapper>
                 <Outlet />
