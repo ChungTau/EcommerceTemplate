@@ -24,7 +24,7 @@ export const mainOutlet: OutletConfig = {
     HOME: {
       name: 'Home',
       icon: GoHomeFill,
-      path: '/home',
+      path: '/',
       lazyComponent: () => import('../page/main/outlet/home'),
       isProtected: false,
     },
@@ -37,12 +37,15 @@ export const mainOutlet: OutletConfig = {
     },
   };
 
+export const userOutlet: OutletConfig = {
+};
+
 export const outlet = { ...mainOutlet};
 
 export const routes = {
   MAIN: {
     name: 'Main',
-    path: '/',
+    path: mainOutlet.HOME.path,
     component: MainPage,
     outlet: { ...mainOutlet},
     isProtected: false,

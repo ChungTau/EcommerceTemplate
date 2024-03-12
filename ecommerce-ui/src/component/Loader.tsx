@@ -63,7 +63,7 @@ function Loader({
 
     const container: Variants = {
         hidden: {
-            opacity: 0
+            opacity: 1
         },
         visible: (i: number = 1) => ({
             opacity: 1,
@@ -73,7 +73,7 @@ function Loader({
             }
         }),
         exit: {
-            opacity: 1
+            opacity: 0
         }
     };
 
@@ -85,6 +85,7 @@ function Loader({
                 ? "visible"
                 : "hidden"}>
             <LoaderInner
+                
                 layoutId="main-title-container"
                 variants={container}
                 onAnimationComplete={onAnimationComplete}>
