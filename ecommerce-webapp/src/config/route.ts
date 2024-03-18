@@ -1,0 +1,1 @@
+export const routes:RouteType[] = [{"name": "about", "path": "/about"}, {"name":"contact", "path": "/contact"}];
