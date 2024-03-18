@@ -1,10 +1,10 @@
 import {MenuIcon} from "lucide-react";
-import {Button} from "../ui/button";
+import {Button, ButtonProps} from "../ui/button";
 
-export default function MenuButton() {
+export function MenuButton({...prop}:ButtonProps) {
     return (
         <div className="sm:hidden">
-            <Button variant="ghost" size="icon" className="hover:bg-gray-100/[0.05]">
+            <Button variant="ghost" size="icon" className="hover:bg-gray-100/[0.05]" {...prop}>
                 <MenuIcon className="h-4 w-4"/>
             </Button>
         </div>

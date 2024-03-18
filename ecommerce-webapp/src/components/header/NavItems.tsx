@@ -3,7 +3,7 @@ import {NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuLi
 import {LinkWithLocale} from "./LinkWithLocale";
 import {BaseProps} from "@/types/baseProps";
 
-export default function NavBar({t, lng} : BaseProps) {
+export default function NavItems({t, lng} : BaseProps) {
     return (
         <NavigationMenu>
             <NavigationMenuList>

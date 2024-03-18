@@ -10,7 +10,7 @@ export default function MainLayout({children, params: {
     return (
         <div className="flex overflow-y-hidden justify-center bg-white dark:bg-neutral-800">
             <Header lng={lng}/>
-            <main className="flex flex-col w-full overflow-y-auto h-screen items-center fixed top-16">
+            <main className="flex flex-col w-full overflow-y-auto h-screen items-center fixed top-16 z-10">
                 <div className="max-w-[1200px] px-2 pt-2">
                     {children}
                 </div>
