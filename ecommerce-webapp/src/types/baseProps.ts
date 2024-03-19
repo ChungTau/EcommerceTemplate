@@ -1,7 +1,4 @@
-import {TFunction} from "i18next";
+import { TransType } from "./transType";
+import { LocaleProps } from "./localeProps";
 
-export type BaseProps = {
-    t: ((key : string) => string) & TFunction < "translation",
-    undefined >;
-    lng: string;
-};
+export type BaseProps = TransType & LocaleProps;
