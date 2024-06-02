@@ -17,11 +17,6 @@ ENV KEYCLOAK_ADMIN_PASSWORD=admin
 ENV KC_DB_URL=jdbc:postgresql://ecommerce-db:5432/ecommerce
 ENV KC_DB_USERNAME=demo
 ENV KC_DB_PASSWORD=demo
-ENV KC_HTTP_ENABLED=true
-ENV KC_HOSTNAME_STRICT=false
-ENV KC_HOSTNAME=auth.chungtau.com
-ENV KC_PROXY=edge
-ENV KC_HTTPS_CERTIFICATE_FILE=/etc/x509/https/tls.crt
-ENV KC_HTTPS_CERTIFICATE_KEY_FILE=/etc/x509/https/tls.key
+ENV KC_HOSTNAME=localhost
 
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--import-realm"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev", "--import-realm"]
